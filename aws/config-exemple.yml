@@ -1,0 +1,17 @@
+---
+access:
+  region: your_aws_region
+  access_key: your_aws_access_key
+  secret_key: your_aws_secret_key
+
+security_groups: # list of security groups
+  - {
+      name: your_security_group_name,
+      description: "manage by terraform",
+      rules: [
+        {protocol: tcp, port: 22},
+        {protocol: tcp, port: 80},
+        {protocol: tcp, port: 443}
+      ]
+    }
+
