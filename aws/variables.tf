@@ -3,13 +3,11 @@ variable "access" {
     region     = string
     access_key = string
     secret_key = string
-    key_name   = string
   })
   default = {
     region     = "value"
     access_key = "value"
     secret_key = "value"
-    key_name   = "value"
   }
 }
 

@@ -1,13 +1,3 @@
-
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.0"
-    }
-  }
-}
-
 # load config file
 locals {
   input_file         = "./config.yml"
@@ -15,6 +5,18 @@ locals {
   input              = yamldecode(local.input_file_content)
 }
 
+
+terraform {
+  backend "s3" { # Define a remote bucket (AWS S3)
+
+  }
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+  }
+}
 
 # Configure the AWS Provider
 provider "aws" {

@@ -4,4 +4,4 @@ Dockerfile
 .dockerignore
 .git
 .gitignore
-AWS/config-exemple.yml
+aws/config-exemple.yml

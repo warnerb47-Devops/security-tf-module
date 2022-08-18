@@ -1,4 +1,5 @@
 ---
+# terraform init -backend-config "bucket=bucket_name"  -backend-config "region=your_aws_region"  -backend-config "key=security-tf-module/terraform.tfstate"
 access:
   region: your_aws_region
   access_key: your_aws_access_key
